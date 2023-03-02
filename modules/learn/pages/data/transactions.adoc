@@ -59,10 +59,9 @@ transactions.run((txnctx) -> {
     // get the account documents for Andy and Beth
     var andy = txnctx.get(collection, "Andy");
     var andyContent = andy.contentAsObject();
-
     int andyBalance = andyContent.getInt("account_balance");
-    var beth = txnctx.get(collection, "Beth");
 
+    var beth = txnctx.get(collection, "Beth");
     var bethContent = beth.contentAsObject();
     int bethBalance = bethContent.getInt("account_balance");
 
